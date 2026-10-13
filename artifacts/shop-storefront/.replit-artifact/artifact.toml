@@ -1,0 +1,34 @@
+kind = "web"
+previewPath = "/"
+title = "Shop Storefront"
+description = "A responsive online shop scaffold for product browsing, cart, account access, orders, and checkout, following the uploaded shop brief."
+version = "1.0.0"
+id = "artifacts/shop-storefront"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/", "/_next/hmr" ]
+localPort = 24917
+
+[services.development]
+run = "pnpm --filter @workspace/shop-storefront run dev"
+
+[services.production]
+
+[services.production.build]
+args = [ "pnpm", "--filter", "@workspace/shop-storefront", "run", "build" ]
+
+[services.production.run]
+args = [ "pnpm", "--filter", "@workspace/shop-storefront", "run", "serve" ]
+
+[services.production.run.env]
+PORT = "24917"
+NODE_ENV = "production"
+
+[services.production.health.startup]
+path = "/"
+
+[services.env]
+PORT = "24917"
+BASE_PATH = "/"

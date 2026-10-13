@@ -1,0 +1,1 @@
+- [Next.js in a Vite artifact](nextjs-artifact.md) — The starter `src/pages` directory conflicts with a root-level Next `app`; co-locate the routers or remove the unused starter pages.
