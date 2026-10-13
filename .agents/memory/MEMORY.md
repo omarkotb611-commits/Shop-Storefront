@@ -1,1 +1,2 @@
 - [Next.js in a Vite artifact](nextjs-artifact.md) — The starter `src/pages` directory conflicts with a root-level Next `app`; co-locate the routers or remove the unused starter pages.
+- [Artifact API prefix routing](artifact-api-prefix.md) — Give storefront API calls a unique preview prefix when another artifact owns `/api`.

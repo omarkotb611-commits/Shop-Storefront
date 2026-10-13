@@ -1,10 +1,10 @@
-import { PagePlaceholder } from "@/components/page-placeholder";
+import { redirect } from "next/navigation";
 
-export default function ProductDetailsPage() {
-  return (
-    <PagePlaceholder
-      title="تفاصيل المنتج"
-      description="مسار صفحة تفاصيل المنتج جاهز. ستُحمّل بيانات المنتج من قاعدة البيانات عند تنفيذ هذه المرحلة."
-    />
-  );
+export default async function ProductDetailsPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  redirect(`/books/${encodeURIComponent(id)}`);
 }

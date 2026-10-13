@@ -8,7 +8,7 @@ router = "path"
 
 [[services]]
 name = "web"
-paths = [ "/", "/_next/hmr" ]
+paths = [ "/", "/_next/hmr", "/_book-api" ]
 localPort = 24917
 
 [services.development]
